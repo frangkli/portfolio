@@ -593,6 +593,18 @@
     svelte-hmr "^0.15.3"
     vitefu "^0.2.5"
 
+"@tabler/icons-svelte@^2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-svelte/-/icons-svelte-2.44.0.tgz#b5f91d58d0da4238699e7f5ae493ab77ec4c0a9f"
+  integrity sha512-aEaYhxwix8ciP/lt1vAOVpyKHf9IYYmGJI+R2ITqi7J26kSsfG3OxMqMgtmqpHdTnetM2Agdix/Ld5OlujQ6Gg==
+  dependencies:
+    "@tabler/icons" "2.44.0"
+
+"@tabler/icons@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.44.0.tgz#9f3cf86150b23e84a6eaf9d29ab2b2aaa8c7eed6"
+  integrity sha512-WPPtihDcAwEm1QZM9MXQw6+r/R2/qx7KMU1eegsi9DsqBLAb0W2kbt6e/syvd6j9c+6XNpRVBW1ziGqSWQAWOg==
+
 "@types/babel__core@^7.20.4":
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.5.tgz#3df15f27ba85319caa07ba08d0721889bb39c017"
