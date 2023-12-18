@@ -1,14 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        text: "#ecedf4",
-        background: "#131420",
-        primary: "#836ba8",
+        light: "#fffdf8",
+        dark: "#131420",
         secondary: "#150d16",
-        accent: "#a16ba8",
+        "purple-1": "#836ba8",
+        "purple-2": "#a16ba8",
+      },
+      fontFamily: {
+        sans: ["Cormorant Garamond", "sans-serif"],
+        cursive: ["Cedarville Cursive", "sans-serif"],
       },
     },
   },
