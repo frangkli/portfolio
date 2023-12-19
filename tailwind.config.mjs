@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         sans: ["Cormorant Garamond", "sans-serif"],
         cursive: ["Cedarville Cursive", "sans-serif"],
+        mono: ["Space Mono", "monospace"],
       },
     },
   },
