@@ -13,16 +13,20 @@
   let visible = false;
 </script>
 
-<button
-  class="absolute top-0 left-0 p-5 md:hidden z-20"
-  on:click={() => {
-    visible = !visible;
-  }}><IconMenu2 /></button
+<div
+  class="absolute top-0 left-0 md:hidden z-20 w-full bg-gradient-to-b from-light via-light pb-5"
 >
+  <button
+    class="p-5"
+    on:click={() => {
+      visible = !visible;
+    }}><IconMenu2 /></button
+  >
+</div>
 
 {#if visible}
   <aside
-    class="absolute bg-light h-screen w-screen py-40 text-center md:hidden z-10"
+    class="absolute bg-light h-full w-screen py-40 text-center md:hidden z-10"
     transition:fade={{ duration: 300 }}
   >
     <div class="flex flex-col gap-20">
