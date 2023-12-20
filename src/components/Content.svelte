@@ -2,14 +2,17 @@
   import { onMount } from "svelte";
   import { fly } from "svelte/transition";
 
-  let mounted = false;
+  let visible = false;
   onMount(() => {
-    mounted = true;
+    visible = true;
   });
 </script>
 
-{#if mounted}
-  <div class="h-max py-32 text-justify" in:fly={{ y: 200, duration: 1000 }}>
+{#if visible}
+  <div
+    class="h-max px-8 md:px-0 py-20 md:py-32 text-justify"
+    in:fly={{ y: 200, duration: 1000 }}
+  >
     <slot />
   </div>
 {/if}
