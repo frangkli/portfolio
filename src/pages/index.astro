@@ -1,48 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Content from "../components/Content.svelte";
 import Link from "../components/Link.svelte";
 ---
 
 <Layout title="Home | Frank Li">
-  <Content client:load>
-    <h2 class="text-xl font-bold"># About Me</h2>
-    <hr class="my-2" />
+  <h2 class="text-xl font-bold"># About Me</h2>
+  <hr class="my-2" />
 
-     I'm a CS undergrad at the
-    <Link href="https://cs.uw.edu" client:load>
-      University of Washington{""}
-    </Link>, currently senior standing, projected to graduate in spring 2025.
-    I've been working as a junior software developer at Amazon since June 2023.
-    Currently, I'm pursuing a career in software engineering, but I also
-    actively participate in CS research, previously at
-    <Link href="https://kurtlab.com" client:load>Kurt Lab{""}</Link> researching
-    medical image segmentation using U-Net and Vision Transformers and now
-    working with
-    <Link href="https://faculty.washington.edu/dzhao/" client:load>
-      Dr. Dongfang Zhao{""}
-    </Link>
-     in the
-    <Link href="https://hpdic.github.io/" client:load>HPDIC Lab</Link>
-     on high-performance and secure Vector Databases. Briefly, here are some of
-    my interests:
+   I'm a CS undergrad at the
+  <Link href="https://cs.uw.edu" client:load>
+    University of Washington{""}
+  </Link>, currently senior standing, projected to graduate in spring 2025. I've
+  been working as a junior software developer at Amazon since June 2023.
+  Currently, I'm pursuing a career in software engineering, but I also actively
+  participate in CS research, previously at
+  <Link href="https://kurtlab.com" client:load>Kurt Lab{""}</Link> researching
+  medical image segmentation using U-Net and Vision Transformers and now working
+  with
+  <Link href="https://faculty.washington.edu/dzhao/" client:load>
+    Dr. Dongfang Zhao{""}
+  </Link>
+   in the
+  <Link href="https://hpdic.github.io/" client:load>HPDIC Lab</Link>
+   on high-performance and secure Vector Databases. Briefly, here are some of my
+  interests:
 
-    <hr class="my-2 opacity-0" />
+  <hr class="my-2 opacity-0" />
 
-    <b>Programming Interests</b>: full-stack development, systems programming,
-    and open source software.
+  <b>Programming Interests</b>: full-stack development, systems programming, and
+  open source software.
 
-    <b>Research Interests</b>: deep learning, high-performance systems, and
-    programming languages.
+  <b>Research Interests</b>: deep learning, high-performance systems, and
+  programming languages.
 
-    <h2 class="pt-12 text-xl font-bold"># Background</h2>
-    <hr class="my-2" />
-     I was raised in
-    <Link href="https://wikipedia.org/wiki/Aichi_Prefecture" client:load>
-      Aichi{""}
-    </Link>, Japan, and then moved to Shanghai in 2014 where I finished
-    <Link href="https://ycis-sh.com" client:load>high school{""}</Link>.
-    Finally, in 2022, I came to Seattle to pursue my undergraduate degree at UW.
-    Hence, I am fluent in Japanese, Mandarin, and English.
-  </Content>
+  <h2 class="pt-6 text-xl font-bold"># Background</h2>
+  <hr class="my-2" />
+   I was raised in
+  <Link href="https://wikipedia.org/wiki/Aichi_Prefecture" client:load>
+    Aichi{""}
+  </Link>, Japan, and then moved to Shanghai in 2014 where I finished
+  <Link href="https://ycis-sh.com" client:load>high school{""}</Link>. Finally,
+  in 2022, I came to Seattle to pursue my undergraduate degree at UW. Hence, I
+  am fluent in Japanese, Mandarin, and English.
 </Layout>

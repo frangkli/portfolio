@@ -8,32 +8,30 @@
   } from "@tabler/icons-svelte";
   import { fade } from "svelte/transition";
 
-  let sidebar: HTMLElement;
-
-  let visible = false;
+  export let overlayVisible: boolean;
 </script>
 
 <div
-  class="absolute top-0 left-0 md:hidden z-20 w-full bg-gradient-to-b from-light via-light pb-5"
+  class="fixed lg:hidden z-20 w-full bg-gradient-to-b from-light via-light pb-5"
 >
   <button
     class="p-5"
     on:click={() => {
-      visible = !visible;
+      overlayVisible = !overlayVisible;
     }}><IconMenu2 /></button
   >
 </div>
 
-{#if visible}
+{#if overlayVisible}
   <aside
-    class="absolute bg-light h-full w-screen py-40 text-center md:hidden z-10"
+    class="absolute bg-light h-dvh w-screen text-center lg:hidden z-10"
     transition:fade={{ duration: 300 }}
   >
-    <div class="flex flex-col gap-20">
-      <div class="">
+    <div class="flex flex-col gap-10 pt-40">
+      <div>
         <h1 class="italic text-5xl font-cursive">Frank Li</h1>
       </div>
-      <div class="">
+      <div>
         <ul class="leading-loose text-xl">
           <li><Link href="/" noLine>Home</Link></li>
           <li><Link href="/cv" noLine>CV</Link></li>
@@ -67,7 +65,8 @@
     </div>
   </aside>
 {/if}
-<aside class="h-screen py-64 sticky top-0 hidden md:block">
+
+<aside class="h-screen py-64 sticky top-0 hidden lg:block">
   <div class="flex flex-col gap-10 h-full">
     <div class="w-max">
       <h1 class="italic text-5xl font-cursive">Frank Li</h1>

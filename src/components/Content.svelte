@@ -1,16 +1,12 @@
-<script>
-  import { onMount } from "svelte";
+<script lang="ts">
   import { fly } from "svelte/transition";
 
-  let visible = false;
-  onMount(() => {
-    visible = true;
-  });
+  export let overlayVisible: boolean;
 </script>
 
-{#if visible}
+{#if !overlayVisible}
   <div
-    class="h-max px-8 md:px-0 py-20 md:py-32 text-justify w-full"
+    class="h-max px-8 lg:px-0 py-20 lg:py-32 text-justify w-full"
     in:fly={{ y: 200, duration: 1000 }}
   >
     <slot />

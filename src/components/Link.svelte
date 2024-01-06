@@ -29,7 +29,7 @@
   }}
 >
   <div
-    class="scale-0 md:scale-100 absolute bg-black text-white hidden font-mono px-2 py-1 text-xs"
+    class="scale-0 lg:scale-100 absolute bg-black text-white hidden font-mono px-2 py-1 text-xs"
   >
     {href}
   </div>
