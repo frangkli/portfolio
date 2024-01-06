@@ -1,26 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Content from "../components/Content.svelte";
-import Link from "../components/Link.svelte";
+import Experience from "../components/Experience.svelte";
+import experiences from "../data/experiences.json";
 ---
 
 <Layout title="Home | Frank Li">
-  <Content client:load>
-    <h2 class="text-xl font-extrabold"># Education</h2>
-    <hr class="my-2" />
+  <h2 class="text-xl font-bold"># Education</h2>
+  <hr class="my-2" />
 
-    <div class="flex flex-row w-full">
-      <span class="grow block"
-        >Bachelor of Science in Computer Science, GPA: 3.9</span
-      >
-      <span class="grow block text-right">2022-2025</span>
-    </div>
-     University of Washington - Seattle
+  <div class="flex flex-row w-full">
+    <span class="grow block"
+      >Bachelor of Science in Computer Science, GPA: 3.9</span
+    >
+    <span class="grow block text-right">2022-2025</span>
+  </div>
+   University of Washington - Seattle
 
-    <h2 class="pt-12 text-xl font-extrabold"># Experiences</h2>
-    <hr class="my-2" />
+  <h2 class="pt-6 text-xl font-bold"># Experiences</h2>
+  <hr class="my-2" />
 
-    <h2 class="text-xl font-extrabold"># Research</h2>
-    <hr class="my-2" />
-  </Content>
+  {experiences.map((exp) => <Experience exp={exp} />)}
+
+  <h2 class="pt-6 text-xl font-bold"># Research</h2>
+  <hr class="my-2" />
 </Layout>
