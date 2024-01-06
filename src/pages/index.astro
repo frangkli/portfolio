@@ -6,34 +6,36 @@ import Link from "../components/Link.svelte";
 
 <Layout title="Home | Frank Li">
   <Content client:load>
-    <h2 class="text-xl font-extrabold"># About Me</h2>
+    <h2 class="text-xl font-bold"># About Me</h2>
     <hr class="my-2" />
 
      I'm a CS undergrad at the
     <Link href="https://cs.uw.edu" client:load>
       University of Washington{""}
     </Link>, currently senior standing, projected to graduate in spring 2025.
-    I've also been working as a junior software developer at Amazon since June
-    2023. I have a passion for building complex systems using low-level
-    languages and tools. Also, I enjoy embarking on exploratory projects to
-    discover new technologies and I'm excited by topics such as distributed
-    systems, programming languages & compilers, as well as GPU programming.
-
-    <hr class="my-2 opacity-0" />
-     I also actively participate in CS research, previously at
+    I've been working as a junior software developer at Amazon since June 2023.
+    Currently, I'm pursuing a career in software engineering, but I also
+    actively participate in CS research, previously at
     <Link href="https://kurtlab.com" client:load>Kurt Lab{""}</Link> researching
     medical image segmentation using U-Net and Vision Transformers and now
     working with
     <Link href="https://faculty.washington.edu/dzhao/" client:load>
       Dr. Dongfang Zhao{""}
     </Link>
-     on Vector Databases. Other than that, I'm also a member of
-    <Link href="https://uw-i2.org/" client:load>
-      Interactice Intelligence{""}
-    </Link> student research group at UW where I work as a researcher and
-    lecturer for the intro course.
+     in the
+    <Link href="https://hpdic.github.io/" client:load>HPDIC Lab</Link>
+     on high-performance and secure Vector Databases. Briefly, here are some of
+    my interests:
 
-    <h2 class="pt-12 text-xl font-extrabold"># Background</h2>
+    <hr class="my-2 opacity-0" />
+
+    <b>Programming Interests</b>: full-stack development, systems programming,
+    and open source software.
+
+    <b>Research Interests</b>: deep learning, high-performance systems, and
+    programming languages.
+
+    <h2 class="pt-12 text-xl font-bold"># Background</h2>
     <hr class="my-2" />
      I was raised in
     <Link href="https://wikipedia.org/wiki/Aichi_Prefecture" client:load>
@@ -42,14 +44,5 @@ import Link from "../components/Link.svelte";
     <Link href="https://ycis-sh.com" client:load>high school{""}</Link>.
     Finally, in 2022, I came to Seattle to pursue my undergraduate degree at UW.
     Hence, I am fluent in Japanese, Mandarin, and English.
-    <div class="md:float-right pt-12 select-none">
-      <img
-        src="/owl.png"
-        alt="Owl"
-        width="250"
-        height="250"
-        class="mx-auto md:mx-0"
-      />
-    </div>
   </Content>
 </Layout>
