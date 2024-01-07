@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.svelte";
-import experiences from "../data/experiences.json";
+import Link from "../components/Link.svelte";
 ---
 
 <Layout title="Home | Frank Li">
@@ -9,17 +9,99 @@ import experiences from "../data/experiences.json";
   <hr class="my-2" />
 
   <div class="flex flex-row w-full">
-    <span class="grow block"
-      >Bachelor of Science in Computer Science, GPA: 3.9</span
-    >
-    <span class="grow block text-right">2022-2025</span>
+    <span class="grow block">
+      <span class="inline-block">Bachelor of Science in Computer Science</span>
+      <span class="hidden md:inline-block">, GPA: 3.9</span>
+    </span>
+    <span class="flex-none block text-right">2022-2025</span>
   </div>
-   University of Washington - Seattle
+  <div class="flex flex-row w-full">
+    <span>University of Washington - Seattle</span>
+    <span class="md:hidden">, GPA: 3.9</span>
+  </div>
+
+  <div class="text-right pt-2 md:pt-0">
+    ... for more details, see <Link href="/academics" client:load>
+      academics{""}
+    </Link>.
+  </div>
 
   <h2 class="pt-6 text-xl font-bold"># Experiences</h2>
   <hr class="my-2" />
 
-  {experiences.map((exp) => <Experience exp={exp} />)}
+  <Experience
+    exp={{
+      company: "Amazon",
+      position: "Jr. Software Developer II",
+      startDate: "Jun '23",
+      endDate: "Present",
+    }}>
+    <ul class="pl-6 list-disc list-outside">
+      <li>
+        Year-round internship (part time during the academic year, full time
+        during the summer).
+      </li>
+      <li>
+        Full stack development using Java, React, Typescript, and AWS services
+        managed by CDK.
+      </li>
+    </ul>
+  </Experience>
+
+  <Experience
+    exp={{
+      company: "Interactive Intelligence",
+      position: "Teaching Assistant",
+      startDate: "Mar '23",
+      endDate: "Dec '23",
+    }}>
+    <ul class="pl-6 list-disc list-outside">
+      <li>
+        TA and computer vision lecturer for the <Link
+          href="https://course.uw-i2.org/"
+          client:load>
+          intro neuro/ai course{""}
+        </Link> in spring and fall.
+      </li>
+    </ul>
+  </Experience>
+
+  <Experience
+    exp={{
+      company: "Shanghai Media Intelligence Technology",
+      position: "Software Engineer Intern",
+      startDate: "Jul '21",
+      endDate: "Aug '21",
+    }}>
+    <ul class="pl-6 list-disc list-outside">
+      <li>
+        Created a video comparison tool using React, syncing videos by
+        precaching contents.
+      </li>
+      <li>
+        Improved machine learning data pipelines and added automatic data
+        augmentation.
+      </li>
+    </ul>
+  </Experience>
+
+  <Experience
+    exp={{
+      company: "Creative Hose Equipment Technology",
+      position: "Full Stack Developer Intern",
+      startDate: "Jul '18",
+      endDate: "Aug '18",
+    }}>
+    <ul class="pl-6 list-disc list-outside">
+      <li>
+        Added features to the inventory management system using Java with
+        Spring.
+      </li>
+      <li>
+        Created a new prototype leveraging modern tools like Angular and Node.
+      </li>
+    </ul>
+  </Experience>
 
   <h2 class="pt-6 text-xl font-bold"># Research</h2>
   <hr class="my-2" />
