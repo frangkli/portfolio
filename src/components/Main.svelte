@@ -22,7 +22,7 @@
   </Content>
   <div class="hidden md:block md:absolute md:bottom-8 md:right-8">
     <img
-      src="/owl.png"
+      src="/assets/owl.png"
       alt="Owl"
       width={owlSize ? owlSize : 0}
       height={owlSize ? owlSize : 0}

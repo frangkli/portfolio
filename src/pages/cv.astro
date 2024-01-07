@@ -31,8 +31,8 @@ import Link from "../components/Link.svelte";
 
   <Experience
     exp={{
-      company: "Amazon",
-      position: "Jr. Software Developer II",
+      title: "Jr. Software Developer II",
+      subtitle: "Amazon",
       startDate: "Jun '23",
       endDate: "Present",
     }}>
@@ -50,8 +50,8 @@ import Link from "../components/Link.svelte";
 
   <Experience
     exp={{
-      company: "Interactive Intelligence",
-      position: "Teaching Assistant",
+      title: "Teaching Assistant",
+      subtitle: "Interactive Intelligence",
       startDate: "Mar '23",
       endDate: "Dec '23",
     }}>
@@ -68,8 +68,8 @@ import Link from "../components/Link.svelte";
 
   <Experience
     exp={{
-      company: "Shanghai Media Intelligence Technology",
-      position: "Software Engineer Intern",
+      title: "Software Engineer Intern",
+      subtitle: "Shanghai Media Intelligence Technology",
       startDate: "Jul '21",
       endDate: "Aug '21",
     }}>
@@ -87,8 +87,8 @@ import Link from "../components/Link.svelte";
 
   <Experience
     exp={{
-      company: "Creative Hose Equipment Technology",
-      position: "Full Stack Developer Intern",
+      title: "Full Stack Developer Intern",
+      subtitle: "Creative Hose Equipment Technology",
       startDate: "Jul '18",
       endDate: "Aug '18",
     }}>
@@ -105,4 +105,46 @@ import Link from "../components/Link.svelte";
 
   <h2 class="pt-6 text-xl font-bold"># Research</h2>
   <hr class="my-2" />
+
+  <Experience
+    exp={{
+      title: "High Performance and Secure Vector Database",
+      subtitle: "HPDIC Lab",
+      startDate: "Jan '24",
+      endDate: "Present",
+    }}
+  />
+
+  <Experience
+    exp={{
+      title: "Web Neural Network with Complete DiGraphs",
+      subtitle: "Independent Research",
+      startDate: "Sep '23",
+      endDate: "Dec '23",
+    }}>
+    <ul class="pl-6 list-disc list-outside">
+      <li>
+        <Link href="under review" client:load>ArXiv preprint</Link>, <Link
+          href="/assets/webnn_poster.pdf"
+          client:load>
+          presentation poster
+        </Link>
+      </li>
+    </ul>
+  </Experience>
+
+  <Experience
+    exp={{
+      title: "Medical Image Segmentation and Synthesis",
+      subtitle: "UW Kurt Lab",
+      startDate: "Mar '23",
+      endDate: "Jun '23",
+    }}>
+    <ul class="pl-6 list-disc list-outside">
+      <li>
+        Exploring and implementing U-Net, Inception-Transmorph, and GAN
+        architectures.
+      </li>
+    </ul>
+  </Experience>
 </Layout>
