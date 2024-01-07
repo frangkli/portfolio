@@ -39,7 +39,7 @@ const { title } = Astro.props;
     </script>
   </head>
   <body class="bg-light text-dark w-full h-dvh">
-    <Main client:load>
+    <Main client:only>
       <slot />
     </Main>
   </body>
