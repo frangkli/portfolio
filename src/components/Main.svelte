@@ -6,11 +6,11 @@
   let mainContainer: HTMLElement;
   let innerWidth = window.innerWidth;
 
-  $: owlSize = Math.min(
-    250,
-    mainContainer ? (innerWidth - mainContainer.clientWidth) / 2 : 0
-  );
+  $: gap = mainContainer ? (innerWidth - mainContainer.clientWidth) / 2 : 0;
+  $: owlSize = gap > 150 ? Math.min(250, gap) : 0;
 </script>
+
+<svelte:window on:resize={() => (innerWidth = window.innerWidth)} />
 
 <main
   class="flex flex-row lg:px-8 lg:mx-auto w-full lg:max-w-5xl lg:gap-14 overflow-hidden text-sm md:text-lg"
