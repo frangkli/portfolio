@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="text-lg">
-        <p>&copy; 2023 Frank Li.</p>
+        <p>&copy; 2024 Frank Li.</p>
       </div>
     </div>
   </aside>
@@ -89,7 +89,7 @@
       <Link href="mailto://frankla0203@outlook.com"><IconMail /></Link>
     </div>
     <div>
-      <p>&copy; 2023 Frank Li.</p>
+      <p>&copy; 2024 Frank Li.</p>
     </div>
   </div>
 </aside>

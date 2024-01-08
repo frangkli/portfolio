@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Experience from "../components/Experience.svelte";
+import Link from "../components/Link.svelte";
+---
+
+<Layout title="Academics | Frank Li">
+  <h2 class="text-xl font-bold"># Relevant Coursework</h2>
+  <hr class="my-2" />
+
+  <details open>
+    <summary>Winter 2024</summary>
+    <span>
+      <ul class="pl-6 list-disc list-outside">
+        <li>CSE 344</li>
+        <li>CSE 446</li>
+        <li>CSE 492R</li>
+        <li>CSE 499</li>
+        <li>AMATH 352</li>
+      </ul>
+    </span>
+  </details>
+
+  <details open>
+    <summary>Autumn 2023</summary>
+    <span>
+      <ul class="pl-6 list-disc list-outside">
+        <li>CSE 390R</li>
+        <li>CSE 452</li>
+        <li>CSE 453</li>
+        <li>CSE 493G1</li>
+      </ul>
+    </span>
+  </details>
+
+  <details>
+    <summary>Summer 2023</summary>
+    <span>
+      <ul class="pl-6 list-disc list-outside">
+        <li>CSE 312</li>
+        <li>CSE 332</li>
+      </ul>
+    </span>
+  </details>
+
+  <details>
+    <summary>Spring 2023</summary>
+    <span>
+      <ul class="pl-6 list-disc list-outside">
+        <li>CSE 311</li>
+        <li>CSE 369</li>
+        <li>MATH 208</li>
+      </ul>
+    </span>
+  </details>
+
+  <details>
+    <summary>Winter 2023</summary>
+    <span>
+      <ul class="pl-6 list-disc list-outside">
+        <li>CSE 331</li>
+        <li>CSE 333</li>
+        <li>MATH 126</li>
+      </ul>
+    </span>
+  </details>
+
+  <details>
+    <summary>Fall 2023</summary>
+    <span>
+      <ul class="pl-6 list-disc list-outside">
+        <li>CSE 190</li>
+        <li>CSE 351</li>
+        <li>MATH 125</li>
+      </ul>
+    </span>
+  </details>
+</Layout>
+
+<style>
+  summary {
+    cursor: pointer;
+  }
+  summary::before {
+    content: "";
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+</style>
