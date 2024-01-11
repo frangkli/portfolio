@@ -16,11 +16,21 @@
         leftDiff = selfLeft - parentLeft;
       }
 
-      const parentTop = text.parentElement?.getBoundingClientRect().top || 0;
+      const selfTop = text.getBoundingClientRect().top;
+      const parentTop = text.parentElement?.getBoundingClientRect().top;
+      console.log(event.offsetY, selfTop, parentTop, window.scrollY);
+      let topDiff = 0;
+      if (parentTop == 0) {
+        topDiff = event.offsetY;
+      } else {
+        topDiff = event.offsetY + parentTop + window.scrollY;
+      }
+      if (parentTop && selfTop - parentTop > event.offsetY) {
+        topDiff = selfTop - parentTop;
+      }
 
-      console.log(event.offsetY);
       modal.style.left = `${event.offsetX + leftDiff + 10}px`;
-      modal.style.top = `${event.offsetY + parentTop + 10}px`;
+      modal.style.top = `${topDiff + 10}px`;
     }
   }}
   on:mouseenter={(event) => {
