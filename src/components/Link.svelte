@@ -11,12 +11,16 @@
     if (modal instanceof HTMLElement && text instanceof HTMLElement) {
       const selfLeft = text.getBoundingClientRect().left;
       const parentLeft = text.parentElement?.getBoundingClientRect().left;
-      let diff = 0;
+      let leftDiff = 0;
       if (parentLeft && selfLeft - parentLeft > event.offsetX) {
-        diff = selfLeft - parentLeft;
+        leftDiff = selfLeft - parentLeft;
       }
-      modal.style.left = `${event.offsetX + diff + 10}px`;
-      modal.style.top = `${event.clientY + 10}px`;
+
+      const parentTop = text.parentElement?.getBoundingClientRect().top || 0;
+
+      console.log(event.offsetY);
+      modal.style.left = `${event.offsetX + leftDiff + 10}px`;
+      modal.style.top = `${event.offsetY + parentTop + 10}px`;
     }
   }}
   on:mouseenter={(event) => {
