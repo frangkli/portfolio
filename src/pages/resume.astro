@@ -1,7 +1,14 @@
 ---
+import { FileText } from "react-feather";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Frank Li | Resume">
-  <iframe src="/resume.pdf" class="w-full h-full" title="Resume"></iframe>
+  <iframe src="/resume.pdf" class="w-full h-full hidden md:block"></iframe>
+  <a
+    href="/resume.pdf"
+    class="md:hidden w-full flex justify-center border border-dark dark:border-light p-2 rounded-lg"
+  >
+    <FileText size={24} />
+  </a>
 </Layout>
