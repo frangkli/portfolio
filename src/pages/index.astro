@@ -1,45 +1,69 @@
 ---
+import { Heading } from "../components/Heading";
+import { TextLink } from "../components/Links";
 import Layout from "../layouts/Layout.astro";
-import Link from "../components/Link.svelte";
 ---
 
-<Layout title="Home | Frank Li">
-  <h2 class="text-xl font-bold"># About Me</h2>
-  <hr class="my-2" />
-
-   I'm a CS undergrad at the
-  <Link href="https://cs.uw.edu" client:load>
-    University of Washington{""}
-  </Link>, senior credit standing, projected to graduate in spring 2025. I've
-  been working as a junior software developer at Amazon since June 2023.
-  Currently, I'm pursuing a career in software engineering, but I also actively
-  participate in CS research, previously at
-  <Link href="https://kurtlab.com" client:load>Kurt Lab{""}</Link> researching
-  medical image segmentation using U-Net and Vision Transformers and now working
-  with
-  <Link href="https://faculty.washington.edu/dzhao/" client:load>
-    Dr. Dongfang Zhao{""}
-  </Link>
-   in the
-  <Link href="https://hpdic.github.io/" client:load>HPDIC Lab</Link>
-   on high-performance and secure Vector Databases. Briefly, here are some of my
-  interests:
-
-  <hr class="my-2 opacity-0" />
-
-  <b>Programming Interests</b>: full-stack development, systems programming, and
-  open source software.
-  <br />
-  <b>Research Interests</b>: artificial intelligence, high-performance systems,
-  and programming languages.
-
-  <h2 class="pt-6 text-xl font-bold"># Background</h2>
-  <hr class="my-2" />
-   I was raised in
-  <Link href="https://wikipedia.org/wiki/Aichi_Prefecture" client:load>
-    Aichi{""}
-  </Link>, Japan, and then moved to Shanghai in 2014 where I finished
-  <Link href="https://ycis-sh.com" client:load>high school{""}</Link>. Finally,
-  in 2022, I came to Seattle to pursue my undergraduate degree at UW. Hence, I
-  am fluent in Japanese, Mandarin, and English.
+<Layout title="Frank Li | Home">
+  <div class="flex flex-col gap-12">
+    <div class="text-justify">
+      <Heading>ABOUT</Heading>
+      <p>
+        I am a senior undergraduate student pursuing a degree in Computer
+        Science at the
+        <TextLink href="https://cs.uw.edu/">University of Washington</TextLink>,
+        with an anticipated graduation date of spring 2026. As of June 2023, I
+        have been working as a Jr. SDE III at
+        <TextLink href="https://www.amazon.com">Amazon</TextLink>, having
+        progressed from levels I and II. I work full-time during the holidays,
+        and part-time during the school year. This upcoming summer, I will be
+        interning as a Software Engineer at
+        <TextLink href="https://www.twosigma.com">Two Sigma</TextLink> in New York
+        City, followed by an internship as a System Software Engineer at
+        <TextLink href="https://nvidia.com">NVIDIA</TextLink> in Santa Clara during
+        the fall.
+      </p>
+      <br />
+      <p>
+        My primary career aspiration is in software engineering, but I have also
+        engaged in computer science research projects. Notably, I contributed to
+        medical image segmentation research at the
+        <TextLink href="https://www.kurtlab.com/">Kurt Lab</TextLink>, utilizing
+        U-Net and vision transformers, and collaborated with
+        <TextLink href="https://faculty.washington.edu/dzhao/"
+          >Dr. Dongfang Zhao</TextLink
+        >
+        in the <TextLink href="https://hpdic.github.io/">HPDIC Lab</TextLink> on
+        efficient multi-vector query of vector databases.
+      </p>
+      <br />
+      <p>
+        Currently working on some stuff using the <TextLink
+          href="https://modelcontextprotocol.io"
+          >model context protocol</TextLink
+        >.
+      </p>
+    </div>
+    <div>
+      <Heading>NEWS</Heading>
+      <ul class="list-disc list-inside">
+        <li>
+          June 2024 - January 2025: Interviewing, received offers from Two
+          Sigma, Databricks, Stripe, and NVIDIA.
+        </li>
+        <li>June - September 2024: Second summer interning at Amazon.</li>
+        <li>
+          June 2024: Concluded my research at the HPDIC Lab after presenting my
+          work at the UW CS Research Symposium.
+        </li>
+        <li>
+          May 2024: Promoted to Jr. SDE III at Amazon after performance review.
+        </li>
+        <li>
+          January 2024: Joined the HPDIC Lab as an undergraduate researcher
+          working on vector databases.
+        </li>
+      </ul>
+    </div>
+  </div>
 </Layout>

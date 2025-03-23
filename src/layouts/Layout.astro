@@ -1,46 +1,28 @@
 ---
-import Main from "../components/Main.svelte";
-
+import "../styles/global.css";
+import { Sidebar } from "../components/Sidebar";
 const { title } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Space+Mono"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Cedarville+Cursive"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500,700"
-    />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <script>
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
   </head>
-  <body class="bg-light text-dark w-full h-dvh font-medium">
-    <Main client:only>
-      <slot />
-    </Main>
+  <body class="bg-light dark:bg-dark min-h-dvh dark:text-light">
+    <div
+      class="mx-auto max-w-screen-lg min-h-screen flex flex-col md:flex-row gap-12 md:gap-16 py-32"
+    >
+      <Sidebar />
+      <main class="grow">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

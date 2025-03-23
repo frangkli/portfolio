@@ -4,20 +4,25 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.3",
-    "@astrojs/svelte": "^5.0.1",
-    "@astrojs/tailwind": "^5.0.3",
-    "@tabler/icons-svelte": "^3.30.0",
-    "astro": "^4.0.6",
-    "svelte": "^4.2.8",
-    "tailwindcss": "^3.3.6",
-    "typescript": "^5.3.3"
+    "@astrojs/react": "^4.2.1",
+    "@tailwindcss/vite": "^4.0.15",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-feather": "^2.0.10",
+    "tailwindcss": "^4.0.15"
   },
-  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728"
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
 }
